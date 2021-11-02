@@ -1,0 +1,20 @@
+{
+  "files": {
+    "main.css": "/matchi-desu/static/css/main.bab0b925.chunk.css",
+    "main.js": "/matchi-desu/static/js/main.0f22c185.chunk.js",
+    "main.js.map": "/matchi-desu/static/js/main.0f22c185.chunk.js.map",
+    "runtime-main.js": "/matchi-desu/static/js/runtime-main.c29b90f0.js",
+    "runtime-main.js.map": "/matchi-desu/static/js/runtime-main.c29b90f0.js.map",
+    "static/js/2.66d95474.chunk.js": "/matchi-desu/static/js/2.66d95474.chunk.js",
+    "static/js/2.66d95474.chunk.js.map": "/matchi-desu/static/js/2.66d95474.chunk.js.map",
+    "index.html": "/matchi-desu/index.html",
+    "static/css/main.bab0b925.chunk.css.map": "/matchi-desu/static/css/main.bab0b925.chunk.css.map",
+    "static/js/2.66d95474.chunk.js.LICENSE.txt": "/matchi-desu/static/js/2.66d95474.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.c29b90f0.js",
+    "static/js/2.66d95474.chunk.js",
+    "static/css/main.bab0b925.chunk.css",
+    "static/js/main.0f22c185.chunk.js"
+  ]
+}
