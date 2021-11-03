@@ -6,9 +6,9 @@ const getProxyURL = (endPoint) =>
 
 //this is the api base URL
 const apiBaseURL = "mywaifulist.moe";
-const arrList = [3163] //9617, 17005
-//anything after base url
+const arrList = [7606, 15050, 7486, 4329, 9617, 17005, 15499, 13431, 17318, 15322, 13346, 7025] //6843, 7606, 15050, 7486, 4329, 9617, 17005, 15499, 13431, 17318, 15322, 13346, 7025
 
+//anything after base url
 const options = {
     method: "GET",
     headers: { "x-requested-with": "XMLHttpRequest" },
@@ -45,11 +45,18 @@ const FetchData = () => {
         getData();
     }, []);
 
+    const styles = {
+        height: '20vw',
+        width: '20vw',
+        backgroundImage: `url(${data.display_picture})`,
+        backgroundSize: 'cover'
+    }
+
     return (
         <>
             <div>
                 <h1>{data.name}</h1>
-                <div><img style={{ height: '50vw' }} src={data.display_picture} /></div>
+                <div style={styles} />
                 <button onClick={clickHandler}>Random</button>
             </div>
         </>

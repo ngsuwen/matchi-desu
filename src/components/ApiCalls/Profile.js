@@ -50,7 +50,7 @@ const FetchData = () => {
             {data ? 
             <div>
                 <h1>{data.name}</h1>
-                <img style={{ height: '50vw' }} src={data.display_picture} alt='img' />
+                <img style={{ height: '20vw' }} src={data.display_picture} alt='img' />
             </div> : ""}
             <button onClick={clickHandler}>Random</button>
         </>
