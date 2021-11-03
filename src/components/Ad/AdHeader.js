@@ -14,7 +14,7 @@ export default function SimpleCollapse() {
   const handleChange = () => {
     setChecked((prev) => !prev);
   };
-  
+
   const ads = arrList.map((element) => <Collapse in={checked}><Ad id={element}/></Collapse>)
   
   return (
@@ -28,6 +28,7 @@ export default function SimpleCollapse() {
           '& > :not(style)': {
             display: 'flex',
             justifyContent: 'space-around',
+            overflow: 'auto',
           },
         }}
       >
