@@ -1,12 +1,12 @@
 import "./App.css";
 import Profile from "./components/ApiCalls/Profile";
-import Ad from "./components/ApiCalls/Ads";
+import AdComp from "./components/Ad/AdHeader"
 
 function App() {
   return (
     <>
-      <Ad/>
-      <Profile/>
+    <AdComp/>
+    <Profile/>
     </>
   );
 }

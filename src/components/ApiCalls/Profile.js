@@ -29,7 +29,7 @@ const fetchData = async () => {
     }
 };
 
-const FetchData = () => {
+export default function FetchData () {
     const [data, setData] = useState([]);
 
     const clickHandler = async () => {
@@ -56,5 +56,3 @@ const FetchData = () => {
         </>
     );
 };
-
-export default FetchData;
