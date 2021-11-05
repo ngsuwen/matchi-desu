@@ -44,7 +44,7 @@ export default function FetchData({ id }) {
     }, []);
 
     const styles = {
-        height: '10vw',
+        height: '20vw',
         width: '15vw',
         backgroundImage: `url(${data.display_picture})`,
         backgroundSize: 'cover',
@@ -54,7 +54,7 @@ export default function FetchData({ id }) {
 
     return (
         <>
-        <Paper style={styles} variant="outlined" square/>
+        <div style={styles}/>
         </>
     );
 };
