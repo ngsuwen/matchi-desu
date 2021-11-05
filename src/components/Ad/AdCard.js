@@ -8,7 +8,7 @@ import AdCarousel from './AdCarousel'
 
 export default function ActionAreaCard() {
   return (
-    <Card sx={{ width: '15vw' }}>
+    <Card sx={{ width: '15vw', margin: '0.5em' }}>
       <CardActionArea>
         <CardMedia
           component={AdCarousel}

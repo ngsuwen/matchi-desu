@@ -29,7 +29,7 @@ const fetchData = async () => {
     }
 };
 
-export default function FetchData () {
+export default function FetchData ({name, description}) {
     const [data, setData] = useState([]);
 
     const clickHandler = async () => {
@@ -49,10 +49,9 @@ export default function FetchData () {
         <>
             {data ? 
             <div>
-                <h1>{data.name}</h1>
-                <img style={{ height: '20vw' }} src={data.display_picture} alt='img' />
+                <img onClick={clickHandler} style={{ width: '15vw' }} src={data.display_picture} alt='img' />
             </div> : ""}
-            <button onClick={clickHandler}>Random</button>
         </>
     );
 };
+
