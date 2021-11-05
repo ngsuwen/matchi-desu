@@ -44,13 +44,12 @@ export default function FetchData({ id }) {
     }, []);
 
     const styles = {
-        height: '150px',
-        width: '250px',
+        height: '10vw',
+        width: '15vw',
         backgroundImage: `url(${data.display_picture})`,
         backgroundSize: 'cover',
         backgroundRepeat: 'no-repeat',
         backgroundPosition: 'center',
-        display:'flex'
     }
 
     return (

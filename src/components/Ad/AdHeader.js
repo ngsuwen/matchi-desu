@@ -4,19 +4,28 @@ import Switch from '@mui/material/Switch';
 import Collapse from '@mui/material/Collapse';
 import FormControlLabel from '@mui/material/FormControlLabel';
 import Ad from '../ApiCalls/AdsApi';
+import { keyframes } from '@mui/system';
 
 const arrList = [15050, 4329, 9617, 15499, 13431, 17318, 15322, 13346, 7025]
 
+const scroll = keyframes`
+  from {
+    transform: translate(-100%,0);
+  }
+  to {
+    transform: translate(100%,0);
+  }
+`;
 
 export default function SimpleCollapse() {
   const [checked, setChecked] = React.useState(false);
-  
+
   const handleChange = () => {
     setChecked((prev) => !prev);
   };
 
-  const ads = arrList.map((element) => <Collapse in={checked}><Ad id={element}/></Collapse>)
-  
+  const ads = arrList.map((element) => <Collapse in={checked}><Ad id={element} /></Collapse>)
+
   return (
     <>
       <FormControlLabel
@@ -25,17 +34,20 @@ export default function SimpleCollapse() {
       />
       <Box
         sx={{
-          '& > :not(style)': {
             display: 'flex',
-            justifyContent: 'space-around',
-            overflow: 'auto',
-          },
+            overflow: 'hidden',
+            animation: `${scroll} 20s infinite linear`
         }}
       >
-        <div>
+        <Box
+          sx={{
+              display: 'flex',
+              overflow: 'hidden',
+          }}
+        >
           {ads}
-        </div>
       </Box>
-      </>
+    </Box>
+    </>
   );
 }
