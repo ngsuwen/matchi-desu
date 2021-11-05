@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from "react";
-import Paper from '@mui/material/Paper';
 
 //this is a function to generate proxyURL
 const getProxyURL = (endPoint) =>

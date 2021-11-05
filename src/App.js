@@ -1,6 +1,6 @@
 import "./App.css";
 import Profile from "./components/ApiCalls/Profile";
-import AdComp from "./components/Ad/AdCarousel"
+import AdComp from "./components/Ad/AdCard"
 
 function App() {
   return (

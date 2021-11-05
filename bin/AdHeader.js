@@ -3,7 +3,7 @@ import Box from '@mui/material/Box';
 import Switch from '@mui/material/Switch';
 import Collapse from '@mui/material/Collapse';
 import FormControlLabel from '@mui/material/FormControlLabel';
-import Ad from '../ApiCalls/AdsApi';
+import Ad from '../src/components/ApiCalls/AdsApi';
 import { keyframes } from '@mui/system';
 
 const arrList = [15050, 4329, 9617, 15499, 13431, 17318, 15322, 13346, 7025]
