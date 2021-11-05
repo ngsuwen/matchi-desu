@@ -52,7 +52,7 @@ export default function ActionAreaCard() {
   }, []);
 
   return (
-    <Card sx={{ width: '15vw', margin: '0.5em' }} onClick={clickHandler}>
+    <Card sx={{ width: '15vw', maxHeight: '35vw', margin: '0.5em'}} onClick={clickHandler}>
       <CardActionArea>
         <CardMedia
           component='img'
@@ -64,9 +64,11 @@ export default function ActionAreaCard() {
           <Typography gutterBottom variant="h5" component="div">
             {data?data.name:'Ad here'}
           </Typography>
+          <div style={{overflow: "hidden"}}>
           <Typography variant="body2" color="text.secondary">
             {data?data.description:'Ad here'}
           </Typography>
+          </div>
         </CardContent>
       </CardActionArea>
     </Card>
