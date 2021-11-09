@@ -8,13 +8,13 @@ import AdCarousel from './AdCarousel'
 
 export default function ActionAreaCard() {
   return (
-    <Card sx={{ width: '15vw', margin: '0.5em' }}>
+    <Card sx={{ width: 200, margin: 1 }}>
       <CardActionArea>
         <CardMedia
           component={AdCarousel}
         />
         <CardContent>
-          <Typography gutterBottom variant="h5" component="div">
+          <Typography sx={{fontSize:20, fontWeight:'bold'}} variant="h1" gutterBottom component="div">
             Hot singles in your area!!!
           </Typography>
           <Typography variant="body2" color="text.secondary">

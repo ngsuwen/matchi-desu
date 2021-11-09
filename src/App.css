@@ -11,3 +11,8 @@ body {
 .swipe {
   position: absolute;
 }
+
+.profile {
+  display: flex;
+  justify-content: center;
+}

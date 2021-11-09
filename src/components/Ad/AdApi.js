@@ -43,8 +43,8 @@ export default function FetchData({ id }) {
     }, []);
 
     const styles = {
-        height: '20vw',
-        width: '15vw',
+        height: 210,
+        width: 200,
         backgroundImage: `url(${data.display_picture})`,
         backgroundSize: 'cover',
         backgroundRepeat: 'no-repeat',

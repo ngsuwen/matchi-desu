@@ -17,7 +17,7 @@ const options = {
 
 const fetchData = async () => {
   let dataArray=[]
-  for (let i=0;i<15;i++){
+  for (let i=0;i<8;i++){
     try {
         let id = 25 * Math.floor(Math.random() * 860)
         const apiEndPoint = `api/waifu/${id}`;
