@@ -22,7 +22,7 @@ export default function FetchData({ id }) {
             const URL = getProxyURL(apiEndPoint) + apiBaseURL;
             const response = await fetch(URL, options);
             const data = await response.json();
-            console.log(data.data);
+            // console.log(data.data);
             return data.data;
         } catch (err) {
             console.log(err);

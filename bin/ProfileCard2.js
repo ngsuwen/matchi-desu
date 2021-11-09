@@ -4,7 +4,6 @@ import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
 import Typography from '@mui/material/Typography';
 import { CardActionArea } from '@mui/material';
-import TinderCard from './TinderCard';
 
 //this is a function to generate proxyURL
 const getProxyURL = (endPoint) =>
@@ -21,8 +20,6 @@ const options = {
 };
 
 const fetchData = async () => {
-  let dataArray=[]
-  for (let i=0;i<15;i++){
     try {
         let id = 25 * Math.floor(Math.random() * 860)
         const apiEndPoint = `api/waifu/${id}`;
@@ -30,22 +27,21 @@ const fetchData = async () => {
         const URL = getProxyURL(apiEndPoint) + apiBaseURL;
         const response = await fetch(URL, options);
         const data = await response.json();
-        dataArray.push(data.data);
-      } catch (err) {
+        console.log(data.data);
+        return data.data;
+    } catch (err) {
         console.log(err);
-      }
     }
-  return dataArray;
 };
 
 export default function ActionAreaCard() {
 
   const [data, setData] = useState([]);
 
-  // const clickHandler = async () => {
-  //     const response = await fetchData();
-  //     setData(response);
-  // }
+  const clickHandler = async () => {
+      const response = await fetchData();
+      setData(response);
+  }
 
   useEffect(() => {
       const getData = async () => {
@@ -56,6 +52,25 @@ export default function ActionAreaCard() {
   }, []);
 
   return (
-    <TinderCard data={data} />
+    <Card sx={{ width: '15vw', maxHeight: '35vw', margin: '0.5em'}} onClick={clickHandler}>
+      <CardActionArea>
+        <CardMedia
+          component='img'
+          image={data?data.display_picture:''} 
+          alt='img'
+          style={{ width: '15vw' }}
+        />
+        <CardContent>
+          <Typography gutterBottom variant="h5" component="div">
+            {data?data.name:'Ad here'}
+          </Typography>
+          <div style={{overflow: "hidden"}}>
+          <Typography variant="body2" color="text.secondary">
+            {data?data.description:'Ad here'}
+          </Typography>
+          </div>
+        </CardContent>
+      </CardActionArea>
+    </Card>
   );
 }
