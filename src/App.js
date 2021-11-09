@@ -1,7 +1,6 @@
 import "./App.css";
-import Profile from "./components/Profile/ProfileCard"
+import Profile from "./components/Profile/ProfileApi"
 import AdComp from "./components/Ad/AdCard"
-import Tinder from "./components/Profile/TinderCard"
 
 import './App.css'
 
