@@ -1,15 +1,17 @@
 import "./App.css";
-import Profile from "./components/Profile/ProfileApi"
-import Welcome from "./components/Pages/Welcome"
-import AdCard from "./components/Ad/AdCard"
+import Main from "./components/Pages/Main";
+import Welcome from "./components/Pages/Welcome";
+import { Route, Link, Routes, Navigate } from "react-router-dom"
 
 import './App.css'
 
 function App() {
   return (
     <>
-    {/* <AdCard/> */}
-    <Welcome/>
+      <Routes>
+        <Route path='/' element={<Welcome />} />
+        <Route path='/main' element={<Main />} />
+      </Routes>
     </>
   );
 }
