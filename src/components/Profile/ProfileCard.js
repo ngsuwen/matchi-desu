@@ -15,7 +15,12 @@ export default function TinderProfileCard({ data }) {
     }
 
     return (
-        <Box className='profile'>
+        <Box sx={{
+            display: 'flex',
+            flexGrow: 1,
+            justifyContent: 'center',
+            alignItems: 'center',
+        }}>
             {data.map((character) =>
                 <TinderCard className='swipe' key={character.name} onSwipe={(dir) => swiped(dir, character.name, character.id)} onCardLeftScreen={() => outOfFrame(character.name)}>
                     <Card sx={{ width: 300, height: 500, padding: 1, boxShadow: '0px 0px 30px 0px rgba(0,0,0,0.20)' }}>
