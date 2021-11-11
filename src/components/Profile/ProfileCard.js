@@ -1,10 +1,6 @@
 import React from 'react';
 import TinderCard from 'react-tinder-card';
-import Card from '@mui/material/Card';
-import CardContent from '@mui/material/CardContent';
-import CardMedia from '@mui/material/CardMedia';
-import Typography from '@mui/material/Typography';
-import { CardActionArea } from '@mui/material';
+import { Box, Card, CardContent, CardMedia, CardActionArea, Typography } from '@mui/material';
 
 export default function TinderProfileCard({ data }) {
 
@@ -19,7 +15,7 @@ export default function TinderProfileCard({ data }) {
     }
 
     return (
-        <div className='profile'>
+        <Box className='profile'>
             {data.map((character) =>
                 <TinderCard className='swipe' key={character.name} onSwipe={(dir) => swiped(dir, character.name, character.id)} onCardLeftScreen={() => outOfFrame(character.name)}>
                     <Card sx={{ width: 300, height: 500, padding: 1, boxShadow: '0px 0px 30px 0px rgba(0,0,0,0.20)' }}>
@@ -35,16 +31,14 @@ export default function TinderProfileCard({ data }) {
                                 <Typography gutterBottom variant="h6" component="div">
                                     {character ? character.name : ''}
                                 </Typography>
-                                <div style={{ overflow: "hidden", height: 40 }}>
-                                    <Typography variant="body2" color="text.secondary">
-                                        {character ? character.description : ''}
-                                    </Typography>
-                                </div>
+                                <Typography style={{ overflow: "hidden", height: 40 }} variant="body2" color="text.secondary">
+                                    {character ? character.description : ''}
+                                </Typography>
                             </CardContent>
                         </CardActionArea>
                     </Card>
                 </TinderCard>
             )}
-        </div>
+        </Box>
     )
 }
