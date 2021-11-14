@@ -1,6 +1,7 @@
 import React from 'react';
 import TinderCard from 'react-tinder-card';
 import { Button, Box, Card, CardContent, CardMedia, CardActionArea, Typography } from '@mui/material';
+import Ad from '../Ad/AdCard'
 
 export default function TinderProfileCard({ data, dataLength, setDataLength, newList, setNewList }) {
 
@@ -8,11 +9,11 @@ export default function TinderProfileCard({ data, dataLength, setDataLength, new
         if (direction === 'right') {
             localStorage.setItem(id, name)
         }
-        setDataLength((prev)=>prev-=1)
+        setDataLength((prev) => prev -= 1)
     }
 
-    const moreClickHandler=()=>{
-        setNewList(newList?false:true)
+    const moreClickHandler = () => {
+        setNewList(newList ? false : true)
     }
 
     const outOfFrame = (name) => {
@@ -49,19 +50,27 @@ export default function TinderProfileCard({ data, dataLength, setDataLength, new
                     </Card>
                 </TinderCard>
             )}
-            {(dataLength<=0)?
-            <Button sx={{
-                color: 'black',
-                zIndex: 0,
-                borderRadius: '20px',
-                backgroundColor: '#FFF',
-                width: 220,
-                fontWeight: 'bold',
-                '&:hover':{
-                    backgroundColor: '#FFF',
-                }
-            }} variant="contained" onClick={moreClickHandler}>find more waifus</Button>
-            :''}
+            {(dataLength <= 0) ?
+                <Box sx={{
+                    display: 'flex',
+                    justifyContent: 'center',
+                    alignItems: 'center',
+                    flexDirection: 'column'
+                }}>
+                    <Ad/>
+                    <Button sx={{
+                        color: 'black',
+                        zIndex: 0,
+                        borderRadius: '20px',
+                        backgroundColor: '#FFF',
+                        width: 220,
+                        fontWeight: 'bold',
+                        '&:hover': {
+                            backgroundColor: '#FFF',
+                        }
+                    }} variant="contained" onClick={moreClickHandler}>find more waifus</Button>
+                </Box>
+                : ''}
         </Box>
     )
 }
