@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import TinderCard from './ProfileCard';
+import TinderProfileCard from './ProfileCard';
 
 //this is a function to generate proxyURL
 const getProxyURL = (endPoint) =>
@@ -34,18 +34,20 @@ const fetchData = async () => {
 };
 
 export default function ProfileCard() {
-
+  const [newList, setNewList] = useState(false)
+  const [dataLength, setDataLength] = useState()
   const [data, setData] = useState([]);
 
   useEffect(() => {
       const getData = async () => {
           const response = await fetchData();
           setData(response);
+          setDataLength(response.length)
       };
       getData();
-  }, []);
+  }, [newList]);
 
   return (
-    <TinderCard data={data} />
+    <TinderProfileCard data={data} dataLength={dataLength} setDataLength={setDataLength} newList={newList} setNewList={setNewList} />
   );
 }

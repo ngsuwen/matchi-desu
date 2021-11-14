@@ -1,15 +1,18 @@
-import React, { useState } from 'react';
+import React from 'react';
 import TinderCard from 'react-tinder-card';
 import { Button, Box, Card, CardContent, CardMedia, CardActionArea, Typography } from '@mui/material';
 
-export default function TinderProfileCard({ data }) {
-    const [dataLength, setDataLength]=useState(data.length)
+export default function TinderProfileCard({ data, dataLength, setDataLength, newList, setNewList }) {
 
     const swiped = (direction, name, id) => {
         if (direction === 'right') {
             localStorage.setItem(id, name)
         }
         setDataLength((prev)=>prev-=1)
+    }
+
+    const moreClickHandler=()=>{
+        setNewList(newList?false:true)
     }
 
     const outOfFrame = (name) => {
@@ -57,7 +60,7 @@ export default function TinderProfileCard({ data }) {
                 '&:hover':{
                     backgroundColor: '#FFF',
                 }
-            }} variant="contained">find more waifus</Button>
+            }} variant="contained" onClick={moreClickHandler}>find more waifus</Button>
             :''}
         </Box>
     )
