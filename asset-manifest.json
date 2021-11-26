@@ -1,20 +1,23 @@
 {
   "files": {
-    "main.css": "/matchi-desu/static/css/main.b8532109.chunk.css",
-    "main.js": "/matchi-desu/static/js/main.7a5f17aa.chunk.js",
-    "main.js.map": "/matchi-desu/static/js/main.7a5f17aa.chunk.js.map",
+    "main.css": "/matchi-desu/static/css/main.c8685ddf.chunk.css",
+    "main.js": "/matchi-desu/static/js/main.7b5024f5.chunk.js",
+    "main.js.map": "/matchi-desu/static/js/main.7b5024f5.chunk.js.map",
     "runtime-main.js": "/matchi-desu/static/js/runtime-main.c29b90f0.js",
     "runtime-main.js.map": "/matchi-desu/static/js/runtime-main.c29b90f0.js.map",
-    "static/js/2.21c1b192.chunk.js": "/matchi-desu/static/js/2.21c1b192.chunk.js",
-    "static/js/2.21c1b192.chunk.js.map": "/matchi-desu/static/js/2.21c1b192.chunk.js.map",
+    "static/css/2.ad5db7ce.chunk.css": "/matchi-desu/static/css/2.ad5db7ce.chunk.css",
+    "static/js/2.5be223a3.chunk.js": "/matchi-desu/static/js/2.5be223a3.chunk.js",
+    "static/js/2.5be223a3.chunk.js.map": "/matchi-desu/static/js/2.5be223a3.chunk.js.map",
     "index.html": "/matchi-desu/index.html",
-    "static/css/main.b8532109.chunk.css.map": "/matchi-desu/static/css/main.b8532109.chunk.css.map",
-    "static/js/2.21c1b192.chunk.js.LICENSE.txt": "/matchi-desu/static/js/2.21c1b192.chunk.js.LICENSE.txt"
+    "static/css/2.ad5db7ce.chunk.css.map": "/matchi-desu/static/css/2.ad5db7ce.chunk.css.map",
+    "static/css/main.c8685ddf.chunk.css.map": "/matchi-desu/static/css/main.c8685ddf.chunk.css.map",
+    "static/js/2.5be223a3.chunk.js.LICENSE.txt": "/matchi-desu/static/js/2.5be223a3.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.c29b90f0.js",
-    "static/js/2.21c1b192.chunk.js",
-    "static/css/main.b8532109.chunk.css",
-    "static/js/main.7a5f17aa.chunk.js"
+    "static/css/2.ad5db7ce.chunk.css",
+    "static/js/2.5be223a3.chunk.js",
+    "static/css/main.c8685ddf.chunk.css",
+    "static/js/main.7b5024f5.chunk.js"
   ]
 }
