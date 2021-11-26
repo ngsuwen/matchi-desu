@@ -15,13 +15,11 @@ An anime waifu dating app
 
 ## Accomplishments
 * API call
-```
+
+## To do
 * chat list
 * save favourite waifus
-
-Bonus
 * implement chatbot
-```
 
 ## Difficulties Faced
 * Took some time to understand react libraries (carousel, material UI)
